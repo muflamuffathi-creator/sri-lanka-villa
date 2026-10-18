@@ -1,0 +1,9 @@
+# Git Ignore for Villa WordPress Theme & Project
+.DS_Store
+Thumbs.db
+*.log
+wp-config.php
+node_modules/
+dist/
+.vscode/
+.idea/

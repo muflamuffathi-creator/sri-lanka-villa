@@ -1,0 +1,113 @@
+[
+  {
+    "key": "group_villa_room_details",
+    "title": "Villa Room & Suite Details",
+    "fields": [
+      {
+        "key": "field_room_price",
+        "label": "Price Per Night ($ USD)",
+        "name": "room_price",
+        "type": "number",
+        "instructions": "Enter standard nightly rate in USD (e.g. 165)",
+        "required": 1,
+        "default_value": "165",
+        "placeholder": "165",
+        "min": 1,
+        "step": 1
+      },
+      {
+        "key": "field_room_guests",
+        "label": "Max Occupancy (Guests)",
+        "name": "room_guests",
+        "type": "number",
+        "instructions": "Maximum number of adult guests permitted",
+        "required": 1,
+        "default_value": "2",
+        "placeholder": "2",
+        "min": 1,
+        "max": 10
+      },
+      {
+        "key": "field_bed_type",
+        "label": "Bedding Configuration",
+        "name": "bed_type",
+        "type": "select",
+        "instructions": "Select primary bed setup",
+        "required": 1,
+        "choices": {
+          "King Size Canopy Bed": "King Size Canopy Bed",
+          "Four-Poster Teak King Bed": "Four-Poster Teak King Bed",
+          "Queen Size Heritage Bed": "Queen Size Heritage Bed",
+          "Twin Deluxe Beds": "Twin Deluxe Beds"
+        },
+        "default_value": "King Size Canopy Bed"
+      },
+      {
+        "key": "field_room_size",
+        "label": "Room Size",
+        "name": "room_size",
+        "type": "text",
+        "instructions": "Room dimensions including balcony/verandah",
+        "required": 0,
+        "default_value": "52 m² / 560 sq.ft",
+        "placeholder": "e.g. 52 m² / 560 sq.ft"
+      },
+      {
+        "key": "field_room_view",
+        "label": "View Type",
+        "name": "room_view",
+        "type": "text",
+        "instructions": "Primary scenery from suite",
+        "required": 0,
+        "default_value": "Indian Ocean & Lighthouse View",
+        "placeholder": "e.g. Indian Ocean & Lighthouse View"
+      },
+      {
+        "key": "field_room_amenities",
+        "label": "Featured Amenities",
+        "name": "room_amenities",
+        "type": "checkbox",
+        "instructions": "Select all amenities available in this room",
+        "required": 0,
+        "choices": {
+          "Private Oceanfront Balcony": "Private Oceanfront Balcony",
+          "Handcrafted Teak Furniture": "Handcrafted Teak Furniture",
+          "En-suite Open Air Rain Shower": "En-suite Open Air Rain Shower",
+          "Ceylon Artisan Coffee & Tea Station": "Ceylon Artisan Coffee & Tea Station",
+          "Individually Controlled Air Conditioning": "Individually Controlled Air Conditioning",
+          "Complimentary High-Speed Wi-Fi": "Complimentary High-Speed Wi-Fi",
+          "In-room Safe & Organic Toiletries": "In-room Safe & Organic Toiletries",
+          "Nightly Turndown Service": "Nightly Turndown Service",
+          "Private Plunge Pool": "Private Plunge Pool",
+          "Direct Courtyard Access": "Direct Courtyard Access"
+        },
+        "default_value": [
+          "Private Oceanfront Balcony",
+          "Handcrafted Teak Furniture",
+          "En-suite Open Air Rain Shower",
+          "Ceylon Artisan Coffee & Tea Station",
+          "Individually Controlled Air Conditioning",
+          "Complimentary High-Speed Wi-Fi"
+        ],
+        "layout": "vertical"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "room"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Custom specifications for Sri Lankan boutique villa rooms"
+  }
+]

@@ -1,0 +1,32 @@
+/*
+Theme Name: Villa Galle Fort - Astra Child
+Theme URI: https://github.com/yourusername/villa-galle-fort
+Description: Bespoke luxury child theme for a Sri Lankan boutique guesthouse/villa with Custom Post Types, Advanced Custom Fields, live weather API, and WhatsApp direct bookings.
+Author: Muflah
+Author URI: https://github.com/yourusername
+Template: astra
+Version: 1.0.0
+Text Domain: astra-villa-child
+License: GNU General Public License v2 or later
+*/
+
+/* Core Theme Custom Properties */
+:root {
+    --villa-primary: #183B36;       /* Deep Ceylon Pine / Emerald */
+    --villa-primary-light: #25544E; /* Lighter Emerald for hover states */
+    --villa-accent: #C5A059;        /* Warm Sunset Gold */
+    --villa-accent-hover: #AA8642;  /* Deep Gold */
+    --villa-sand: #F7F5F0;          /* Soft Villa Sand */
+    --villa-cream: #FAF9F6;         /* Off-white */
+    --villa-dark: #1E2221;          /* Charcoal Black */
+    --villa-gray: #6B7280;          /* Muted Gray */
+    --villa-border: #E5E7EB;        /* Clean Border Gray */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --shadow-soft: 0 10px 30px rgba(24, 59, 54, 0.08);
+    --shadow-hover: 0 20px 40px rgba(24, 59, 54, 0.14);
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}

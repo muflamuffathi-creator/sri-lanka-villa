@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Galle Fort | Luxury Boutique Sanctuary Sri Lanka</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Theme Stylesheet -->
+    <link rel="stylesheet" href="../astra-villa-child/assets/css/villa-custom.css">
+    <style>
+        /* Standalone Preview Header & Navigation */
+        .preview-top-nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--villa-border);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-brand {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--villa-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-brand span {
+            color: var(--villa-accent);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--villa-dark);
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: var(--transition);
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--villa-accent);
+        }
+        .nav-cta {
+            background: var(--villa-primary);
+            color: #fff !important;
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+        }
+        .nav-cta:hover {
+            background: var(--villa-accent) !important;
+        }
+        .preview-badge-banner {
+            background: #183B36;
+            color: #FAF9F6;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .preview-badge-banner a {
+            color: var(--villa-accent);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Portfolio Banner -->
+    <div class="preview-badge-banner">
+        <span><i class="fa-solid fa-code"></i> WordPress Hospitality Showcase Prototype for <strong>Smart eWorks</strong> | Includes CPT, ACF & Live Weather</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="preview-top-nav">
+        <div class="villa-container nav-inner">
+            <a href="#" class="nav-brand">
+                <i class="fa-solid fa-hotel"></i>
+                Villa Galle <span>Fort</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#overview">The Villa</a></li>
+                <li><a href="#rooms-section" class="active">Suites & Rates</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#location">Galle Fort Map</a></li>
+                <li><a href="#villa-reservation-form" class="nav-cta">Direct Enquiry</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Room Hero Banner -->
+    <header class="villa-room-hero" id="overview" style="background-image: linear-gradient(180deg, rgba(24,59,54,0.45) 0%, rgba(24,59,54,0.9) 100%), url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1920&q=80');">
+        <div class="villa-container">
+            <nav class="villa-breadcrumbs">
+                <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                <span class="sep">/</span>
+                <a href="#rooms-section">Suites & Villas</a>
+                <span class="sep">/</span>
+                <span class="current">The Dutch Galle Master Suite</span>
+            </nav>
+
+            <div style="display:flex; align-items:center; gap: 14px; flex-wrap: wrap; margin-bottom: 12px;">
+                <span class="villa-badge-tag"><i class="fa-solid fa-crown"></i> Heritage Luxury Collection</span>
+                <div class="villa-weather-pill" title="Live weather in Galle Fort via Open-Meteo REST API">
+                    <i class="fa-solid fa-sun weather-icon"></i>
+                    <span class="weather-city">Galle Fort Live:</span>
+                    <span class="weather-temp">29°C</span>
+                    <span class="weather-cond">Sunny & Tropical</span>
+                </div>
+            </div>
+
+            <h1 class="villa-room-heading">The Dutch Galle Master Suite</h1>
+            <p class="villa-room-subline">Experience tranquil coastal living within Galle's 17th-century ramparts</p>
+        </div>
+    </header>
+
+    <!-- Quick Availability Bar -->
+    <div class="villa-container">
+        <div class="villa-booking-bar-container">
+            <form class="villa-booking-bar-form" action="#villa-reservation-form">
+                <div class="booking-field">
+                    <label for="bar-checkin"><i class="fa-regular fa-calendar-check"></i> Check-in</label>
+                    <input type="date" id="bar-checkin" required>
+                </div>
+                <div class="booking-field">
+                    <label for="bar-checkout"><i class="fa-regular fa-calendar-xmark"></i> Check-out</label>
+                    <input type="date" id="bar-checkout" required>
+                </div>
+                <div class="booking-field">
+                    <label for="bar-room"><i class="fa-solid fa-bed"></i> Preferred Suite</label>
+                    <select id="bar-room">
+                        <option value="The Dutch Galle Master Suite" selected>The Dutch Galle Master Suite ($220)</option>
+                        <option value="Kandyan Garden Plunge Villa">Kandyan Garden Plunge Villa ($185)</option>
+                        <option value="Lighthouse Ocean Horizon Suite">Lighthouse Ocean Horizon Suite ($195)</option>
+                        <option value="Ceylon Cinnamon Courtyard Room">Ceylon Cinnamon Courtyard Room ($140)</option>
+                    </select>
+                </div>
+                <div class="booking-field">
+                    <label for="bar-guests"><i class="fa-solid fa-user-group"></i> Guests</label>
+                    <select id="bar-guests">
+                        <option value="1">1 Guest</option>
+                        <option value="2" selected>2 Guests</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4+">4+ Guests / Whole Villa</option>
+                    </select>
+                </div>
+                <div class="booking-field booking-submit-wrap">
+                    <button type="submit" class="villa-btn-book">
+                        <span>Check Availability</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="villa-container villa-main-wrapper">
+        <div class="villa-content-columns">
+            
+            <!-- Left: Specifications, Narrative & Amenities -->
+            <article class="villa-room-details">
+
+                <!-- 4-Card Specs Bar (Dynamic from ACF) -->
+                <div class="villa-specs-grid">
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-user-group"></i></div>
+                        <div class="spec-text">
+                            <span class="spec-label">Capacity</span>
+                            <span class="spec-value">2 Guests</span>
+                        </div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-bed"></i></div>
+                        <div class="spec-text">
+                            <span class="spec-label">Bedding</span>
+                            <span class="spec-value">Four-Poster Teak King</span>
+                        </div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-expand"></i></div>
+                        <div class="spec-text">
+                            <span class="spec-label">Floor Space</span>
+                            <span class="spec-value">65 m² / 700 sq.ft</span>
+                        </div>
+                    </div>
+                    <div class="spec-card">
+                        <div class="spec-icon"><i class="fa-solid fa-compass"></i></div>
+                        <div class="spec-text">
+                            <span class="spec-label">Panorama</span>
+                            <span class="spec-value">Ocean & Ramparts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Narrative -->
+                <section class="villa-section">
+                    <h2>Suite Overview</h2>
+                    <p>An ode to 17th-century craftsmanship and coastal serenity. Featuring soaring timber-beam ceilings, authentic Sri Lankan teak antiques, and double mahogany French doors opening directly to your private verandah overlooking the UNESCO Galle Fort ramparts.</p>
+                    <p>Wake up to the gentle murmur of the Indian Ocean, indulge in a gourmet Ceylon breakfast served on your terrace, and unwind in the hand-carved stone soaking tub infused with local cinnamon and frangipani oils.</p>
+                </section>
+
+                <!-- Amenities Checklist -->
+                <section class="villa-section">
+                    <h2>Included Suite Amenities</h2>
+                    <div class="amenities-grid-two-col">
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>Private Oceanfront Verandah</span></div>
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>Handcrafted Antique Teak Furniture</span></div>
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>Open-Air Rain Shower & Soaking Tub</span></div>
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>Complimentary Single-Estate Ceylon Tea</span></div>
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>Quiet Inverter Air Conditioning</span></div>
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>High-Speed Fiber Wi-Fi (100 Mbps)</span></div>
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>In-Room Electronic Safe & Minibar</span></div>
+                        <div class="amenity-item"><i class="fa-solid fa-circle-check"></i> <span>Evening Turndown with Fresh Orchid Sprays</span></div>
+                    </div>
+                </section>
+
+                <!-- Value Guarantees -->
+                <section class="villa-section villa-perks-box">
+                    <div class="perk-card">
+                        <i class="fa-solid fa-utensils"></i>
+                        <div>
+                            <h4>Complimentary Ceylon Feast</h4>
+                            <p>Daily morning feast of crispy egg hoppers, fresh passion fruit, and mountain-grown Ceylon tea.</p>
+                        </div>
+                    </div>
+                    <div class="perk-card">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <div>
+                            <h4>Personal Villa Concierge</h4>
+                            <p>Curated whale watching excursions in Mirissa, private surf charters, and historical walking tours.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+
+            <!-- Right: Sticky Booking & WhatsApp Direct Card -->
+            <aside class="villa-room-sidebar">
+                <div class="villa-booking-card-sticky">
+                    <div class="booking-price-header">
+                        <span class="price-prefix">From</span>
+                        <div class="price-main">
+                            <span class="currency">$</span>
+                            <span class="figure">220</span>
+                            <span class="period">/ night</span>
+                        </div>
+                        <span class="price-tax-note"><i class="fa-solid fa-check"></i> Includes all local taxes & daily breakfast</span>
+                    </div>
+
+                    <div class="booking-perks-list">
+                        <div><i class="fa-solid fa-bolt"></i> Instant Confirmation via WhatsApp Desk</div>
+                        <div><i class="fa-solid fa-hand-holding-dollar"></i> Direct Booking Guarantee — Zero Agency Fees</div>
+                        <div><i class="fa-solid fa-shield-halved"></i> Flexible Cancellation up to 7 days before check-in</div>
+                    </div>
+
+                    <!-- WhatsApp CTA -->
+                    <a href="https://wa.me/94771234567?text=Hello%20Villa%20Galle!%20I%20would%20like%20to%20enquire%20about%20reserving%20the%20Dutch%20Galle%20Master%20Suite%20($220/night).%20Are%20these%20dates%20available?" target="_blank" rel="noopener" class="villa-btn-whatsapp-large">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Enquire on WhatsApp</span>
+                    </a>
+
+                    <div class="booking-divider">
+                        <span>OR EMAIL ENQUIRY</span>
+                    </div>
+
+                    <!-- Email CTA -->
+                    <a href="#villa-reservation-form" class="villa-btn-email-enquiry">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Submit Booking Request</span>
+                    </a>
+
+                    <div class="direct-booking-trust">
+                        <i class="fa-solid fa-phone"></i> Villa Concierge Desk: +94 (0) 77 123 4567
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- Other Suites Section (Archive Grid Preview) -->
+    <section class="villa-rooms-grid-section" id="rooms-section">
+        <div class="villa-container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <span class="section-subtitle">Our Collection</span>
+                <h2 style="font-size: 2.6rem; margin: 10px 0;">All Rooms & Suites</h2>
+                <p style="color: var(--villa-gray); max-width: 600px; margin: 0 auto;">Explore each individually appointed sanctuary within our private gated estate.</p>
+            </div>
+
+            <div class="villa-rooms-grid">
+                <!-- Card 1 -->
+                <article class="villa-room-card">
+                    <div class="room-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Kandyan Garden Plunge Villa">
+                        <span class="card-category-tag">Garden Chalet</span>
+                        <div class="card-price-tag">
+                            <span class="prefix">From</span>
+                            <span class="cost">$185</span>
+                            <span class="unit">/ night</span>
+                        </div>
+                    </div>
+                    <div class="room-card-body">
+                        <h3 class="room-card-title"><a href="#">Kandyan Garden Plunge Villa</a></h3>
+                        <div class="room-card-specs">
+                            <span><i class="fa-solid fa-users"></i> 3 Guests</span>
+                            <span><i class="fa-solid fa-bed"></i> King Canopy</span>
+                            <span><i class="fa-solid fa-maximize"></i> 58 m²</span>
+                        </div>
+                        <p class="room-card-excerpt">Secluded chalet featuring private outdoor plunge pool, frangipani gardens, and sun deck.</p>
+                        <div class="room-card-actions">
+                            <a href="#overview" class="btn-card-explore"><span>Suite Details</span> <i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="https://wa.me/94771234567?text=Hello!%20Enquiry%20for%20Kandyan%20Garden%20Plunge%20Villa" target="_blank" class="btn-card-wa"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="villa-room-card">
+                    <div class="room-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Lighthouse Ocean Horizon Suite">
+                        <span class="card-category-tag">Ocean Suite</span>
+                        <div class="card-price-tag">
+                            <span class="prefix">From</span>
+                            <span class="cost">$195</span>
+                            <span class="unit">/ night</span>
+                        </div>
+                    </div>
+                    <div class="room-card-body">
+                        <h3 class="room-card-title"><a href="#">Lighthouse Ocean Horizon Suite</a></h3>
+                        <div class="room-card-specs">
+                            <span><i class="fa-solid fa-users"></i> 2 Guests</span>
+                            <span><i class="fa-solid fa-bed"></i> King Bed</span>
+                            <span><i class="fa-solid fa-maximize"></i> 50 m²</span>
+                        </div>
+                        <p class="room-card-excerpt">Commanding uninterrupted views of the historic Galle Lighthouse and fiery tropical sunsets.</p>
+                        <div class="room-card-actions">
+                            <a href="#overview" class="btn-card-explore"><span>Suite Details</span> <i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="https://wa.me/94771234567?text=Hello!%20Enquiry%20for%20Lighthouse%20Ocean%20Horizon%20Suite" target="_blank" class="btn-card-wa"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="villa-room-card">
+                    <div class="room-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80" alt="Ceylon Cinnamon Courtyard Room">
+                        <span class="card-category-tag">Heritage Room</span>
+                        <div class="card-price-tag">
+                            <span class="prefix">From</span>
+                            <span class="cost">$140</span>
+                            <span class="unit">/ night</span>
+                        </div>
+                    </div>
+                    <div class="room-card-body">
+                        <h3 class="room-card-title"><a href="#">Ceylon Cinnamon Courtyard Room</a></h3>
+                        <div class="room-card-specs">
+                            <span><i class="fa-solid fa-users"></i> 2 Guests</span>
+                            <span><i class="fa-solid fa-bed"></i> Queen Bed</span>
+                            <span><i class="fa-solid fa-maximize"></i> 42 m²</span>
+                        </div>
+                        <p class="room-card-excerpt">Peaceful courtyard sanctuary surrounding the lotus pond with hand-poured encaustic tiles.</p>
+                        <div class="room-card-actions">
+                            <a href="#overview" class="btn-card-explore"><span>Suite Details</span> <i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="https://wa.me/94771234567?text=Hello!%20Enquiry%20for%20Ceylon%20Cinnamon%20Courtyard%20Room" target="_blank" class="btn-card-wa"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Whole Villa Buyout Banner -->
+    <section class="villa-buyout-banner">
+        <div class="villa-container">
+            <div class="buyout-box">
+                <div class="buyout-text">
+                    <span class="buyout-tag">Private Exclusive Buyout</span>
+                    <h3>Rent The Entire Private Villa</h3>
+                    <p>Enjoy exclusive private use of all 6 luxury suites, swimming pool, private estate grounds, and personal chef for your family holiday, intimate wedding, or retreat.</p>
+                </div>
+                <div class="buyout-action">
+                    <a href="https://wa.me/94771234567?text=Hello%20Villa%20Galle!%20I%20am%20enquiring%20about%20a%20Private%20Whole%20Villa%20Buyout." target="_blank" class="btn-buyout-wa">
+                        <i class="fa-brands fa-whatsapp"></i> Enquire for Whole Villa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Form Section -->
+    <section id="villa-reservation-form" class="villa-enquiry-section">
+        <div class="villa-container">
+            <div class="enquiry-card-wrapper">
+                <div class="enquiry-intro">
+                    <span class="section-subtitle">Reservations</span>
+                    <h3>Direct Reservation Enquiry</h3>
+                    <p>Send your requested dates. Our villa manager will confirm availability and reply with personalized rates within 2 hours.</p>
+                </div>
+
+                <form class="villa-direct-form" onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been received. Our reservations team will contact you shortly.');">
+                    <div class="form-row form-row-2">
+                        <div class="form-group">
+                            <label for="guest_name">Full Name *</label>
+                            <input type="text" id="guest_name" placeholder="e.g. David Miller" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest_email">Email Address *</label>
+                            <input type="email" id="guest_email" placeholder="david@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row form-row-3">
+                        <div class="form-group">
+                            <label for="checkin_date">Check-in Date *</label>
+                            <input type="date" id="checkin_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout_date">Check-out Date *</label>
+                            <input type="date" id="checkout_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guest_count">Total Guests *</label>
+                            <select id="guest_count">
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4+">4+ Guests / Whole Villa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guest_notes">Special Requests or Airport Transfer</label>
+                        <textarea id="guest_notes" rows="3" placeholder="Let us know if you require Colombo Airport (CMB) transfer, dietary requirements, or special celebrations..."></textarea>
+                    </div>
+
+                    <button type="submit" class="villa-submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Send Reservation Enquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Widget -->
+    <aside class="villa-whatsapp-floating-wrap">
+        <a href="https://wa.me/94771234567?text=Hello%20Villa%20Galle!%20I%20would%20like%20to%20enquire%20about%20staying%20at%20your%20villa." target="_blank" rel="noopener" class="villa-floating-wa-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="wa-label">Direct Villa Chat</span>
+        </a>
+    </aside>
+
+    <!-- jQuery & Custom Theme Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../astra-villa-child/assets/js/villa-custom.js"></script>
+    <script>
+        // Set default dates
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        document.getElementById('bar-checkin').value = today.toISOString().split('T')[0];
+        document.getElementById('bar-checkout').value = tomorrow.toISOString().split('T')[0];
+        document.getElementById('checkin_date').value = today.toISOString().split('T')[0];
+        document.getElementById('checkout_date').value = tomorrow.toISOString().split('T')[0];
+    </script>
+</body>
+</html>
