@@ -11,7 +11,7 @@ get_header(); ?>
 <main id="primary" class="site-main villa-rooms-archive-page">
 
     <!-- Archive Hero Header -->
-    <header class="villa-archive-hero">
+    <header class="villa-archive-hero" style="background: linear-gradient(180deg, rgba(10,30,27,0.7) 0%, rgba(10,30,27,0.92) 100%), url('<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/hero-villa.jpg'); ?>') center/cover;">
         <div class="villa-container">
             <span class="villa-subtitle-badge"><i class="fa-solid fa-umbrella-beach"></i> Authentic Sri Lankan Hospitality</span>
             <h1 class="archive-main-title">Suites & Private Villas</h1>
@@ -32,22 +32,35 @@ get_header(); ?>
                 <div class="villa-rooms-grid">
                     <?php while (have_posts()) : the_post(); 
                         $post_id    = get_the_ID();
+                        $slug       = get_post_field('post_name', $post_id);
                         $price      = function_exists('get_field') ? get_field('room_price') : get_post_meta($post_id, 'room_price', true);
                         $guests     = function_exists('get_field') ? get_field('room_guests') : get_post_meta($post_id, 'room_guests', true);
                         $bed_type   = function_exists('get_field') ? get_field('bed_type') : get_post_meta($post_id, 'bed_type', true);
                         $room_size  = function_exists('get_field') ? get_field('room_size') : get_post_meta($post_id, 'room_size', true);
 
-                        $price      = $price ?: '150';
+                        $price      = $price ?: '185';
                         $guests     = $guests ?: '2';
                         $bed_type   = $bed_type ?: 'King Bed';
-                        $room_size  = $room_size ?: '48 m²';
+                        $room_size  = $room_size ?: '52 m²';
 
                         $categories = get_the_terms($post_id, 'room_category');
                         $cat_name   = ($categories && !is_wp_error($categories)) ? $categories[0]->name : 'Luxury Suite';
 
+                        // Local high-res fallback mapping
                         $thumb_url = get_the_post_thumbnail_url($post_id, 'large');
                         if (!$thumb_url) {
-                            $thumb_url = 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80';
+                            $theme_img_dir = get_stylesheet_directory_uri() . '/assets/images/';
+                            if (strpos($slug, 'master') !== false) {
+                                $thumb_url = $theme_img_dir . 'suite-master.jpg';
+                            } elseif (strpos($slug, 'garden') !== false) {
+                                $thumb_url = $theme_img_dir . 'suite-garden.jpg';
+                            } elseif (strpos($slug, 'lighthouse') !== false || strpos($slug, 'ocean') !== false) {
+                                $thumb_url = $theme_img_dir . 'suite-ocean.jpg';
+                            } elseif (strpos($slug, 'cinnamon') !== false || strpos($slug, 'courtyard') !== false) {
+                                $thumb_url = $theme_img_dir . 'suite-courtyard.jpg';
+                            } else {
+                                $thumb_url = $theme_img_dir . 'hero-villa.jpg';
+                            }
                         }
 
                         $wa_msg = urlencode("Hello! I want to check availability for " . get_the_title() . " ($" . $price . "/night).");
@@ -135,11 +148,11 @@ get_header(); ?>
                 <div class="buyout-text">
                     <span class="buyout-tag">Private Exclusive Escape</span>
                     <h3>Exclusive Whole Villa Buyout</h3>
-                    <p>Celebrating a wedding, wellness retreat, or family reunion? Rent all 6 suites exclusively with private swimming pool, full villa staff, and personal private chef.</p>
+                    <p>Celebrating a wedding, wellness retreat, or family reunion? Rent all 4 suites exclusively with private swimming pool, full villa staff, and personal private chef.</p>
                 </div>
                 <div class="buyout-action">
                     <a href="https://wa.me/94771234567?text=Hello%20Villa%20Galle!%20I%20am%20interested%20in%20a%20Private%20Whole%20Villa%20Buyout." target="_blank" class="btn-buyout-wa">
-                        <i class="fa-brands fa-whatsapp"></i> Enquire for Whole Villa
+                        <i class="fa-brands fa-whatsapp"></i> Enquire for Whole Villa ($850)
                     </a>
                 </div>
             </div>

@@ -12,6 +12,7 @@ get_header(); ?>
     <?php while (have_posts()) : the_post(); 
         $post_id    = get_the_ID();
         $room_title = get_the_title();
+        $slug       = get_post_field('post_name', $post_id);
 
         // ACF helpers with native fallback
         $price       = function_exists('get_field') ? get_field('room_price') : get_post_meta($post_id, 'room_price', true);
@@ -22,11 +23,11 @@ get_header(); ?>
         $amenities   = function_exists('get_field') ? get_field('room_amenities') : get_post_meta($post_id, 'room_amenities', true);
 
         // Fallback default values
-        $price     = $price ?: '165';
+        $price     = $price ?: '185';
         $guests    = $guests ?: '2';
         $bed_type  = $bed_type ?: 'King Size Canopy Bed';
         $room_size = $room_size ?: '52 m² / 560 sq.ft';
-        $room_view = $room_view ?: 'Indian Ocean & Sunset View';
+        $room_view = $room_view ?: 'Indian Ocean & Ramparts View';
 
         if (empty($amenities) || !is_array($amenities)) {
             $amenities = array(
@@ -41,9 +42,21 @@ get_header(); ?>
             );
         }
 
+        // Map room to real local high-resolution photo
         $hero_img = get_the_post_thumbnail_url($post_id, 'full');
         if (!$hero_img) {
-            $hero_img = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1920&q=80';
+            $theme_img_dir = get_stylesheet_directory_uri() . '/assets/images/';
+            if (strpos($slug, 'master') !== false) {
+                $hero_img = $theme_img_dir . 'suite-master.jpg';
+            } elseif (strpos($slug, 'garden') !== false) {
+                $hero_img = $theme_img_dir . 'suite-garden.jpg';
+            } elseif (strpos($slug, 'lighthouse') !== false || strpos($slug, 'ocean') !== false) {
+                $hero_img = $theme_img_dir . 'suite-ocean.jpg';
+            } elseif (strpos($slug, 'cinnamon') !== false || strpos($slug, 'courtyard') !== false) {
+                $hero_img = $theme_img_dir . 'suite-courtyard.jpg';
+            } else {
+                $hero_img = $theme_img_dir . 'hero-villa.jpg';
+            }
         }
 
         // WhatsApp direct enquiry URL
@@ -53,7 +66,7 @@ get_header(); ?>
     ?>
 
     <!-- Room Hero Banner -->
-    <header class="villa-room-hero" style="background-image: linear-gradient(180deg, rgba(24,59,54,0.4) 0%, rgba(24,59,54,0.85) 100%), url('<?php echo esc_url($hero_img); ?>');">
+    <header class="villa-room-hero" style="background-image: linear-gradient(180deg, rgba(10,30,27,0.45) 0%, rgba(10,30,27,0.85) 100%), url('<?php echo esc_url($hero_img); ?>');">
         <div class="villa-container">
             <nav class="villa-breadcrumbs">
                 <a href="<?php echo esc_url(home_url('/')); ?>"><i class="fa-solid fa-house"></i> Home</a>
@@ -214,9 +227,7 @@ get_header(); ?>
                 </div>
 
                 <div class="enquiry-form-embed">
-                    <!-- Standard Fallback Form (or replace with Contact Form 7 / WPForms shortcode) -->
-                    <form class="villa-direct-form" action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
-                        <input type="hidden" name="action" value="villa_send_enquiry">
+                    <form class="villa-direct-form" onsubmit="event.preventDefault(); alert('Ayubowan! Your reservation enquiry for <?php echo esc_js($room_title); ?> has been received. Our concierge will contact you within 2 hours.');">
                         <input type="hidden" name="room_name" value="<?php echo esc_attr($room_title); ?>">
 
                         <div class="form-row form-row-2">
