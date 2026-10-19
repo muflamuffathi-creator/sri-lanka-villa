@@ -10,21 +10,22 @@ Text Domain: astra-villa-child
 License: GNU General Public License v2 or later
 */
 
-/* Core Theme Custom Properties */
+/* Core Theme Custom Properties (Muted Dull Nature Tones) */
 :root {
-    --villa-primary: #183B36;       /* Deep Ceylon Pine / Emerald */
-    --villa-primary-light: #25544E; /* Lighter Emerald for hover states */
-    --villa-accent: #C5A059;        /* Warm Sunset Gold */
-    --villa-accent-hover: #AA8642;  /* Deep Gold */
-    --villa-sand: #F7F5F0;          /* Soft Villa Sand */
-    --villa-cream: #FAF9F6;         /* Off-white */
-    --villa-dark: #1E2221;          /* Charcoal Black */
-    --villa-gray: #6B7280;          /* Muted Gray */
-    --villa-border: #E5E7EB;        /* Clean Border Gray */
+    --villa-primary: #384239;       /* Muted Slate Olive / Moss */
+    --villa-primary-light: #4E5A50; /* Calm Desaturated Sage Slate */
+    --villa-accent: #9C8673;        /* Muted Warm Taupe / Sandstone */
+    --villa-accent-hover: #7A6756;  /* Deep Muted Earth Clay */
+    --villa-sage: #8A9A87;          /* Calm Muted Sage Green */
+    --villa-sand: #EFECE6;          /* Warm Muted Oatmeal Linen */
+    --villa-cream: #E7E3DB;         /* Soft Muted Limestone */
+    --villa-dark: #2B302C;          /* Soft Charcoal (No harsh black) */
+    --villa-gray: #68716A;          /* Gentle Muted Slate Gray */
+    --villa-border: #D8D3C8;        /* Subtle Muted Clay Stone */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --shadow-soft: 0 10px 30px rgba(24, 59, 54, 0.08);
-    --shadow-hover: 0 20px 40px rgba(24, 59, 54, 0.14);
+    --shadow-soft: 0 10px 30px rgba(36, 41, 36, 0.06);
+    --shadow-hover: 0 20px 40px rgba(36, 41, 36, 0.10);
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;

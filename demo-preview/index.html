@@ -15,23 +15,28 @@
            Design System & Color Palette
            ========================================================================== */
         :root {
-            --primary-dark: #0A1E1B;
-            --primary: #12302B;
-            --primary-light: #1D4740;
-            --accent-gold: #C5A059;
-            --accent-gold-light: #DFBA73;
-            --accent-gold-dark: #A6833E;
-            --sand-bg: #F9F7F2;
-            --cream-bg: #FCFAF7;
-            --text-dark: #1F2421;
-            --text-muted: #5E6966;
-            --text-light: #9BA5A2;
-            --white: #FFFFFF;
-            --border-light: rgba(197, 160, 89, 0.25);
-            --border-subtle: #E8E5DD;
-            --shadow-subtle: 0 4px 20px rgba(10, 30, 27, 0.05);
-            --shadow-luxury: 0 20px 50px rgba(10, 30, 27, 0.12);
-            --shadow-hover: 0 30px 60px rgba(10, 30, 27, 0.18);
+            /* Muted / Dull Nature & Earth Tones (Sophisticated Low Saturation) */
+            --primary-dark: #242924;        /* Deep Muted Charcoal Moss */
+            --primary: #384239;             /* Muted Slate Olive */
+            --primary-light: #4E5A50;       /* Calm Desaturated Sage Slate */
+            --accent-gold: #9C8673;         /* Muted Warm Taupe / Sandstone */
+            --accent-gold-light: #BAA694;   /* Soft Desaturated Greige */
+            --accent-gold-dark: #7A6756;    /* Deep Muted Earth Clay */
+            --accent-sage: #8A9A87;         /* Calm Muted Sage Green */
+            --accent-rose: #B59891;         /* Muted Dusty Rose */
+            --accent-slate: #829596;        /* Desaturated Slate Teal */
+            --sand-bg: #EFECE6;             /* Warm Muted Oatmeal Linen */
+            --cream-bg: #E7E3DB;            /* Soft Muted Limestone */
+            --card-bg: #F8F6F1;             /* Low-Contrast Alabaster Card */
+            --text-dark: #2B302C;           /* Soft Charcoal Text (No harsh black) */
+            --text-muted: #68716A;          /* Gentle Muted Slate Gray */
+            --text-light: #98A19A;          /* Calm Muted Stone */
+            --white: #F8F6F1;               /* Soft Muted Off-White */
+            --border-light: rgba(156, 134, 115, 0.22);
+            --border-subtle: #D8D3C8;       /* Subtle Muted Clay Stone */
+            --shadow-subtle: 0 4px 18px rgba(36, 41, 36, 0.05);
+            --shadow-luxury: 0 16px 40px rgba(36, 41, 36, 0.08);
+            --shadow-hover: 0 24px 48px rgba(36, 41, 36, 0.12);
             --font-display: 'Playfair Display', Georgia, serif;
             --font-editorial: 'Cormorant Garamond', Georgia, serif;
             --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -254,7 +259,7 @@
             text-transform: uppercase;
             padding: 13px 26px;
             border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.35);
+            box-shadow: 0 4px 15px rgba(156, 134, 115, 0.28);
             transition: var(--transition);
             border: none;
             cursor: pointer;
@@ -262,7 +267,7 @@
 
         .btn-gold:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.45);
+            box-shadow: 0 8px 25px rgba(156, 134, 115, 0.38);
             background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%);
             color: #fff;
         }
@@ -300,7 +305,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(10,30,27,0.4) 0%, rgba(10,30,27,0.78) 75%, rgba(10,30,27,0.95) 100%);
+            background: linear-gradient(180deg, rgba(36,41,36,0.45) 0%, rgba(36,41,36,0.76) 75%, rgba(36,41,36,0.96) 100%);
         }
 
         .hero-content {
@@ -315,8 +320,8 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(197, 160, 89, 0.2);
-            border: 1px solid rgba(197, 160, 89, 0.5);
+            background: rgba(138, 154, 135, 0.2);
+            border: 1px solid rgba(138, 154, 135, 0.45);
             color: var(--accent-gold-light);
             font-size: 0.8rem;
             font-weight: 700;
@@ -513,8 +518,8 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: rgba(197, 160, 89, 0.15);
-            color: var(--accent-gold);
+            background: rgba(138, 154, 135, 0.18);
+            color: var(--accent-sage);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -642,7 +647,7 @@
             position: absolute;
             top: 18px;
             left: 18px;
-            background: rgba(10, 30, 27, 0.88);
+            background: rgba(36, 41, 36, 0.88);
             backdrop-filter: blur(6px);
             color: var(--white);
             font-size: 0.74rem;
@@ -793,16 +798,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #25D366;
+            background: #467A5D;
             color: #fff;
             border-radius: 6px;
             font-size: 1.35rem;
             transition: var(--transition);
-            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+            box-shadow: 0 4px 14px rgba(70, 122, 93, 0.35);
         }
 
         .btn-suite-wa:hover {
-            background: #1eb956;
+            background: #3B6B50;
             transform: scale(1.06);
             color: #fff;
         }
@@ -869,7 +874,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(10,30,27,0.1) 0%, rgba(10,30,27,0.85) 100%);
+            background: linear-gradient(180deg, rgba(36,41,36,0.12) 0%, rgba(36,41,36,0.88) 100%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -969,7 +974,7 @@
            Whole Villa Buyout Showcase Banner
            ========================================================================== */
         .buyout-section {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #153833 100%);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #354238 100%);
             color: var(--white);
             border-radius: 20px;
             padding: 60px 70px;
@@ -1193,11 +1198,11 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            background: #25D366;
+            background: #467A5D;
             color: #fff;
             padding: 14px 22px;
             border-radius: 50px;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.45);
+            box-shadow: 0 8px 30px rgba(70, 122, 93, 0.35);
             font-weight: 700;
             font-size: 0.95rem;
             transition: var(--transition);
@@ -1206,7 +1211,8 @@
 
         .floating-whatsapp:hover {
             transform: scale(1.08) translateY(-3px);
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 12px 35px rgba(70, 122, 93, 0.5);
+            background: #3B6B50;
             color: #fff;
         }
 
@@ -1215,9 +1221,9 @@
         }
 
         @keyframes pulse-wa {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-            70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(70, 122, 93, 0.5); }
+            70% { box-shadow: 0 0 0 16px rgba(70, 122, 93, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(70, 122, 93, 0); }
         }
 
         /* Footer */
@@ -1995,7 +2001,7 @@
                 <h5>Direct Contact</h5>
                 <p style="font-size:0.9rem; margin-bottom:12px;"><i class="fa-solid fa-location-dot" style="color:var(--accent-gold);"></i> Light House Street, Galle Fort, Sri Lanka</p>
                 <p style="font-size:0.9rem; margin-bottom:12px;"><i class="fa-solid fa-phone" style="color:var(--accent-gold);"></i> +94 (0) 77 123 4567</p>
-                <p style="font-size:0.9rem;"><i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> wa.me/94771234567</p>
+                <p style="font-size:0.9rem;"><i class="fa-brands fa-whatsapp" style="color:#467A5D;"></i> wa.me/94771234567</p>
             </div>
         </div>
 

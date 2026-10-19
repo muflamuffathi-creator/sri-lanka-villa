@@ -13,22 +13,22 @@ get_header(); ?>
     <!-- Hero Section -->
     <section class="hero-section" id="hero" style="position:relative; min-height:85vh; display:flex; align-items:center; background:#000; overflow:hidden;">
         <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/hero-villa.jpg'); ?>" alt="Villa Galle Fort Exterior" class="hero-bg" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; opacity:0.82;">
-        <div class="hero-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(180deg, rgba(10,30,27,0.4) 0%, rgba(10,30,27,0.85) 100%);"></div>
+        <div class="hero-overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(180deg, rgba(36,41,36,0.45) 0%, rgba(36,41,36,0.85) 100%);"></div>
         <div class="container hero-content" style="position:relative; z-index:2; color:#fff; max-width:880px; padding:80px 28px 140px; margin:0 auto;">
-            <span class="hero-tag" style="display:inline-flex; align-items:center; gap:10px; background:rgba(197,160,89,0.2); border:1px solid rgba(197,160,89,0.5); color:#DFBA73; font-size:0.8rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; padding:8px 18px; border-radius:50px; margin-bottom:24px;">
+            <span class="hero-tag" style="display:inline-flex; align-items:center; gap:10px; background:rgba(138,154,135,0.2); border:1px solid rgba(138,154,135,0.45); color:#BAA694; font-size:0.8rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; padding:8px 18px; border-radius:50px; margin-bottom:24px;">
                 <i class="fa-solid fa-star"></i> Ceylon Boutique Hospitality
             </span>
             <h2 class="hero-title" style="font-size:3.8rem; color:#fff; margin-bottom:20px; line-height:1.15;">
-                Where Colonial Heritage Meets <em style="font-style:italic; color:#DFBA73;">The Indian Ocean</em>
+                Where Colonial Heritage Meets <em style="font-style:italic; color:#BAA694;">The Indian Ocean</em>
             </h2>
             <p class="hero-subtitle" style="font-size:1.2rem; color:rgba(255,255,255,0.9); margin-bottom:36px; line-height:1.6;">
                 An intimate luxury retreat enveloped inside the 17th-century ramparts of UNESCO Galle Fort. Featuring handcrafted teak suites, private plunge pools, and bespoke private chef dining.
             </p>
             <div style="display:flex; gap:16px; flex-wrap:wrap;">
-                <a href="#suites" class="btn-gold" style="padding:15px 32px; background:linear-gradient(135deg, #C5A059 0%, #A6833E 100%); color:#fff; font-weight:700; text-transform:uppercase; border-radius:4px; text-decoration:none;">
+                <a href="#suites" class="btn-gold" style="padding:15px 32px; background:linear-gradient(135deg, #9C8673 0%, #7A6756 100%); color:#fff; font-weight:700; text-transform:uppercase; border-radius:4px; text-decoration:none;">
                     <span>Explore Our 4 Suites</span> <i class="fa-solid fa-arrow-down"></i>
                 </a>
-                <a href="https://wa.me/94771234567?text=Hello%20Villa%20Galle!%20I%20am%20enquiring%20about%20staying%20at%20your%20villa." target="_blank" style="padding:15px 26px; background:#25D366; color:#fff; font-weight:700; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+                <a href="https://wa.me/94771234567?text=Hello%20Villa%20Galle!%20I%20am%20enquiring%20about%20staying%20at%20your%20villa." target="_blank" style="padding:15px 26px; background:#467A5D; color:#fff; font-weight:700; border-radius:4px; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
                     <i class="fa-brands fa-whatsapp"></i> Chat with Villa Host
                 </a>
             </div>
@@ -37,11 +37,11 @@ get_header(); ?>
 
     <!-- Floating Booking Bar -->
     <div class="container" style="max-width:1280px; margin:-70px auto 70px; padding:0 28px; position:relative; z-index:20;">
-        <div style="background:#fff; border-radius:12px; padding:28px 32px; box-shadow:0 20px 50px rgba(10,30,27,0.12); border:1px solid rgba(197,160,89,0.25);">
+        <div style="background:#F8F6F1; border-radius:12px; padding:28px 32px; box-shadow:0 16px 40px rgba(36,41,36,0.08); border:1px solid rgba(156,134,115,0.22);">
             <form onsubmit="event.preventDefault(); document.getElementById('reservations').scrollIntoView({behavior: 'smooth'});" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)) 1.2fr; gap:16px; align-items:flex-end;">
                 <div>
-                    <label style="display:block; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#12302B; margin-bottom:8px;"><i class="fa-regular fa-calendar" style="color:#C5A059;"></i> Check-in</label>
-                    <input type="date" id="wp_checkin" style="width:100%; padding:12px 14px; border:1px solid #E8E5DD; border-radius:6px; background:#F9F7F2;" required>
+                    <label style="display:block; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#384239; margin-bottom:8px;"><i class="fa-regular fa-calendar" style="color:#9C8673;"></i> Check-in</label>
+                    <input type="date" id="wp_checkin" style="width:100%; padding:12px 14px; border:1px solid #D8D3C8; border-radius:6px; background:#EFECE6;" required>
                 </div>
                 <div>
                     <label style="display:block; font-size:0.75rem; font-weight:700; text-transform:uppercase; color:#12302B; margin-bottom:8px;"><i class="fa-regular fa-calendar-check" style="color:#C5A059;"></i> Check-out</label>
