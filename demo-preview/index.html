@@ -15,28 +15,32 @@
            Design System & Color Palette
            ========================================================================== */
         :root {
-            /* Muted / Dull Nature & Earth Tones (Sophisticated Low Saturation) */
-            --primary-dark: #242924;        /* Deep Muted Charcoal Moss */
-            --primary: #384239;             /* Muted Slate Olive */
-            --primary-light: #4E5A50;       /* Calm Desaturated Sage Slate */
-            --accent-gold: #9C8673;         /* Muted Warm Taupe / Sandstone */
-            --accent-gold-light: #BAA694;   /* Soft Desaturated Greige */
-            --accent-gold-dark: #7A6756;    /* Deep Muted Earth Clay */
-            --accent-sage: #8A9A87;         /* Calm Muted Sage Green */
-            --accent-rose: #B59891;         /* Muted Dusty Rose */
-            --accent-slate: #829596;        /* Desaturated Slate Teal */
-            --sand-bg: #EFECE6;             /* Warm Muted Oatmeal Linen */
-            --cream-bg: #E7E3DB;            /* Soft Muted Limestone */
-            --card-bg: #F8F6F1;             /* Low-Contrast Alabaster Card */
-            --text-dark: #2B302C;           /* Soft Charcoal Text (No harsh black) */
-            --text-muted: #68716A;          /* Gentle Muted Slate Gray */
-            --text-light: #98A19A;          /* Calm Muted Stone */
-            --white: #F8F6F1;               /* Soft Muted Off-White */
-            --border-light: rgba(156, 134, 115, 0.22);
-            --border-subtle: #D8D3C8;       /* Subtle Muted Clay Stone */
-            --shadow-subtle: 0 4px 18px rgba(36, 41, 36, 0.05);
-            --shadow-luxury: 0 16px 40px rgba(36, 41, 36, 0.08);
-            --shadow-hover: 0 24px 48px rgba(36, 41, 36, 0.12);
+            /* =====================================================================
+               Exact 4-Color Swatch Palette:
+               Stripe 1: Pale Muted Vanilla Sand (#F0E5AF / #F6F2E2)
+               Stripe 2: Muted Khaki Sage       (#9FA485)
+               Stripe 3: Muted Slate Moss        (#5D6C64)
+               Stripe 4: Deep Muted Navy Slate   (#1D2F3C)
+               ===================================================================== */
+            --primary-dark: #16242E;        /* Deepest Navy Slate base */
+            --primary: #1D2F3C;             /* Main Deep Navy Slate (Stripe 4) */
+            --primary-light: #5D6C64;       /* Muted Slate Moss (Stripe 3) */
+            --accent-gold: #9FA485;         /* Muted Khaki Sage (Stripe 2) */
+            --accent-gold-light: #F0E5AF;   /* Soft Vanilla Sand (Stripe 1) */
+            --accent-gold-dark: #4F5E56;    /* Darkened Slate Moss */
+            --accent-sage: #9FA485;         /* Muted Khaki Sage (Stripe 2) */
+            --sand-bg: #F6F2E2;             /* Pale Vanilla Sand background (Stripe 1) */
+            --cream-bg: #ECE5CE;            /* Soft Muted Butter Linen */
+            --card-bg: #FAF7EC;             /* Low-Glare Pale Alabaster Card */
+            --text-dark: #1D2A33;           /* Charcoal Navy Text (Stripe 4) */
+            --text-muted: #5D6C64;          /* Muted Slate Moss Text (Stripe 3) */
+            --text-light: #9FA485;          /* Soft Khaki Gray (Stripe 2) */
+            --white: #FAF7EC;               /* Warm Off-White (Stripe 1) */
+            --border-light: rgba(159, 164, 133, 0.35);
+            --border-subtle: #DCD4B8;       /* Subtle Vanilla-Clay Stone */
+            --shadow-subtle: 0 4px 18px rgba(29, 47, 60, 0.06);
+            --shadow-luxury: 0 16px 40px rgba(29, 47, 60, 0.10);
+            --shadow-hover: 0 24px 48px rgba(29, 47, 60, 0.15);
             --font-display: 'Playfair Display', Georgia, serif;
             --font-editorial: 'Cormorant Garamond', Georgia, serif;
             --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -251,25 +255,26 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--primary) 0%, #15232D 100%);
+            color: var(--accent-gold-light);
+            border: 1px solid rgba(240, 229, 175, 0.35);
             font-size: 0.88rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
             padding: 13px 26px;
             border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(156, 134, 115, 0.28);
+            box-shadow: 0 4px 15px rgba(29, 47, 60, 0.35);
             transition: var(--transition);
-            border: none;
             cursor: pointer;
         }
 
         .btn-gold:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(156, 134, 115, 0.38);
-            background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%);
-            color: #fff;
+            box-shadow: 0 8px 25px rgba(29, 47, 60, 0.45);
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #8A8F73 100%);
+            color: #16242E;
+            border-color: transparent;
         }
 
         /* Cinematic Hero Section */
@@ -305,7 +310,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(36,41,36,0.45) 0%, rgba(36,41,36,0.76) 75%, rgba(36,41,36,0.96) 100%);
+            background: linear-gradient(180deg, rgba(22,36,46,0.48) 0%, rgba(22,36,46,0.80) 75%, rgba(22,36,46,0.97) 100%);
         }
 
         .hero-content {
@@ -320,8 +325,8 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(138, 154, 135, 0.2);
-            border: 1px solid rgba(138, 154, 135, 0.45);
+            background: rgba(159, 164, 133, 0.25);
+            border: 1px solid rgba(240, 229, 175, 0.4);
             color: var(--accent-gold-light);
             font-size: 0.8rem;
             font-weight: 700;
@@ -798,18 +803,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #467A5D;
-            color: #fff;
+            background: #465D52;
+            color: #F0E5AF;
             border-radius: 6px;
             font-size: 1.35rem;
             transition: var(--transition);
-            box-shadow: 0 4px 14px rgba(70, 122, 93, 0.35);
+            box-shadow: 0 4px 14px rgba(70, 93, 82, 0.35);
         }
 
         .btn-suite-wa:hover {
-            background: #3B6B50;
+            background: #3B5046;
             transform: scale(1.06);
-            color: #fff;
+            color: #F0E5AF;
         }
 
         /* ==========================================================================
@@ -874,7 +879,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(36,41,36,0.12) 0%, rgba(36,41,36,0.88) 100%);
+            background: linear-gradient(180deg, rgba(22,36,46,0.12) 0%, rgba(22,36,46,0.92) 100%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -974,7 +979,7 @@
            Whole Villa Buyout Showcase Banner
            ========================================================================== */
         .buyout-section {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #354238 100%);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #223746 100%);
             color: var(--white);
             border-radius: 20px;
             padding: 60px 70px;
@@ -984,6 +989,7 @@
             grid-template-columns: 1.4fr 1fr;
             gap: 50px;
             align-items: center;
+            border: 1px solid rgba(240, 229, 175, 0.15);
         }
 
         .buyout-badge {
@@ -1198,22 +1204,23 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            background: #467A5D;
-            color: #fff;
+            background: #465D52;
+            color: #F0E5AF;
             padding: 14px 22px;
             border-radius: 50px;
-            box-shadow: 0 8px 30px rgba(70, 122, 93, 0.35);
+            box-shadow: 0 8px 30px rgba(70, 93, 82, 0.4);
             font-weight: 700;
             font-size: 0.95rem;
             transition: var(--transition);
+            border: 1px solid rgba(240, 229, 175, 0.3);
             animation: pulse-wa 3s infinite;
         }
 
         .floating-whatsapp:hover {
             transform: scale(1.08) translateY(-3px);
-            box-shadow: 0 12px 35px rgba(70, 122, 93, 0.5);
-            background: #3B6B50;
-            color: #fff;
+            box-shadow: 0 12px 35px rgba(70, 93, 82, 0.55);
+            background: #3B5046;
+            color: #F0E5AF;
         }
 
         .floating-whatsapp i {
@@ -1221,9 +1228,9 @@
         }
 
         @keyframes pulse-wa {
-            0% { box-shadow: 0 0 0 0 rgba(70, 122, 93, 0.5); }
-            70% { box-shadow: 0 0 0 16px rgba(70, 122, 93, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(70, 122, 93, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(70, 93, 82, 0.55); }
+            70% { box-shadow: 0 0 0 16px rgba(70, 93, 82, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(70, 93, 82, 0); }
         }
 
         /* Footer */

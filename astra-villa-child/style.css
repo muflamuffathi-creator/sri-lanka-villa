@@ -10,22 +10,21 @@ Text Domain: astra-villa-child
 License: GNU General Public License v2 or later
 */
 
-/* Core Theme Custom Properties (Muted Dull Nature Tones) */
+/* Core Theme Custom Properties (Exact 4-Color Muted Swatch Palette) */
 :root {
-    --villa-primary: #384239;       /* Muted Slate Olive / Moss */
-    --villa-primary-light: #4E5A50; /* Calm Desaturated Sage Slate */
-    --villa-accent: #9C8673;        /* Muted Warm Taupe / Sandstone */
-    --villa-accent-hover: #7A6756;  /* Deep Muted Earth Clay */
-    --villa-sage: #8A9A87;          /* Calm Muted Sage Green */
-    --villa-sand: #EFECE6;          /* Warm Muted Oatmeal Linen */
-    --villa-cream: #E7E3DB;         /* Soft Muted Limestone */
-    --villa-dark: #2B302C;          /* Soft Charcoal (No harsh black) */
-    --villa-gray: #68716A;          /* Gentle Muted Slate Gray */
-    --villa-border: #D8D3C8;        /* Subtle Muted Clay Stone */
+    --villa-primary: #1D2F3C;       /* Stripe 4: Deep Muted Navy Slate */
+    --villa-primary-light: #5D6C64; /* Stripe 3: Muted Slate Moss */
+    --villa-accent: #9FA485;        /* Stripe 2: Muted Khaki Sage */
+    --villa-accent-hover: #4F5E56;  /* Deepened Slate Moss */
+    --villa-sand: #F6F2E2;          /* Stripe 1: Pale Muted Vanilla Sand */
+    --villa-cream: #ECE5CE;         /* Soft Muted Butter Linen */
+    --villa-dark: #1D2A33;          /* Charcoal Navy (Easy on eyes) */
+    --villa-gray: #5D6C64;          /* Gentle Muted Slate Moss Gray */
+    --villa-border: #DCD4B8;        /* Subtle Vanilla Clay Stone */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --shadow-soft: 0 10px 30px rgba(36, 41, 36, 0.06);
-    --shadow-hover: 0 20px 40px rgba(36, 41, 36, 0.10);
+    --shadow-soft: 0 10px 30px rgba(29, 47, 60, 0.06);
+    --shadow-hover: 0 20px 40px rgba(29, 47, 60, 0.12);
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
