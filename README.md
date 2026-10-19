@@ -85,38 +85,4 @@ sri-lanka-villa-wordpress/
 
 ---
 
-## 💼 CV Points & Portfolio Description
 
-Add these bullet points to your CV / Resume:
-
-> **WordPress & Front-End Developer | Luxury Hospitality Website (Villa Galle Fort)**
-> - Engineered a bespoke boutique villa website targeting the Sri Lankan tourism market with an Astra child theme and custom PHP.
-> - Developed a Custom Post Type (`room`) and custom taxonomy with custom admin columns and Advanced Custom Fields (ACF) for dynamic room management.
-> - Coded modular PHP templates (`single-room.php` and `archive-room.php`) featuring a 4-metric specifications bar, responsive amenities checklist, and sticky direct booking card.
-> - Built an automated WhatsApp direct-booking engine that dynamically injects room metadata into prefilled inquiries (`wa.me` API).
-> - Integrated an external weather REST API with WordPress Transients caching to display live Galle Fort weather with zero performance overhead.
-
----
-
-## ✉️ Follow-Up Message to Smart eWorks
-
-Use this draft when emailing or messaging Smart eWorks:
-
-> **Subject:** Portfolio Project: Custom WordPress Villa & Direct Booking System (Galle Fort)
->
-> Hi [Hiring Manager / Team at Smart eWorks],
->
-> Knowing your focus on high-performing websites for Sri Lankan hospitality and tourism brands, I built a bespoke boutique villa website prototype: **Villa Galle Fort**.
->
-> Key highlights of what I built:
-> 1. **Custom PHP Development:** Rather than relying purely on page builders, I developed a custom `room` post type and taxonomy in an Astra child theme with clean PHP templates (`single-room.php` and `archive-room.php`).
-> 2. **Advanced Custom Fields (ACF):** Configured structured metadata (nightly rates, guest limits, bed types, size, and amenities) so client staff can manage suites without touching layouts.
-> 3. **Conversion & Direct Bookings:** Engineered a context-aware floating WhatsApp engine that auto-fills inquiry messages with the specific room and rate being browsed, bypassing OTA commissions.
-> 4. **API Integration:** Implemented live Sri Lanka coastal weather via a REST API with transient caching for speed.
->
-> You can inspect the theme code and structure on my GitHub here: [GitHub Repository Link].
->
-> I would love the opportunity to bring these technical and design skills to the client projects at Smart eWorks. Looking forward to your thoughts!
->
-> Best regards,  
-> **Muflah**
