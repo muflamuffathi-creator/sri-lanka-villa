@@ -78,10 +78,10 @@ sri-lanka-villa-wordpress/
 
 ### 4. Seed Sample Rooms
 - Run `database/sample-rooms-seed.sql` in phpMyAdmin under `villa_wp`, or manually create rooms in **Villa Rooms → Add New Room**:
-  - *The Dutch Galle Master Suite* ($220/night, 2 Guests)
-  - *Kandyan Garden Plunge Villa* ($185/night, 3 Guests)
-  - *Lighthouse Ocean Horizon Suite* ($195/night, 2 Guests)
-  - *Ceylon Cinnamon Courtyard Room* ($140/night, 2 Guests)
+  - *The Dutch Galle Master Suite* (Rs. 68,000/night, 2 Guests)
+  - *Kandyan Garden Plunge Villa* (Rs. 56,000/night, 3 Guests)
+  - *Lighthouse Ocean Horizon Suite* (Rs. 60,000/night, 2 Guests)
+  - *Ceylon Cinnamon Courtyard Room* (Rs. 42,000/night, 2 Guests)
 
 ---
 

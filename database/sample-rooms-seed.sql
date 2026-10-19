@@ -23,7 +23,7 @@ INSERT INTO wp_posts (
 SET @room1_id = LAST_INSERT_ID();
 
 INSERT INTO wp_postmeta (post_id, meta_key, meta_value) VALUES
-(@room1_id, 'room_price', '220'),
+(@room1_id, 'room_price', '68,000'),
 (@room1_id, 'room_guests', '2'),
 (@room1_id, 'bed_type', 'Four-Poster Teak King Bed'),
 (@room1_id, 'room_size', '65 m² / 700 sq.ft'),
@@ -47,7 +47,7 @@ INSERT INTO wp_posts (
 SET @room2_id = LAST_INSERT_ID();
 
 INSERT INTO wp_postmeta (post_id, meta_key, meta_value) VALUES
-(@room2_id, 'room_price', '185'),
+(@room2_id, 'room_price', '56,000'),
 (@room2_id, 'room_guests', '3'),
 (@room2_id, 'bed_type', 'King Size Canopy Bed'),
 (@room2_id, 'room_size', '58 m² / 624 sq.ft'),
@@ -71,7 +71,7 @@ INSERT INTO wp_posts (
 SET @room3_id = LAST_INSERT_ID();
 
 INSERT INTO wp_postmeta (post_id, meta_key, meta_value) VALUES
-(@room3_id, 'room_price', '195'),
+(@room3_id, 'room_price', '60,000'),
 (@room3_id, 'room_guests', '2'),
 (@room3_id, 'bed_type', 'King Size Canopy Bed'),
 (@room3_id, 'room_size', '50 m² / 538 sq.ft'),
@@ -95,7 +95,7 @@ INSERT INTO wp_posts (
 SET @room4_id = LAST_INSERT_ID();
 
 INSERT INTO wp_postmeta (post_id, meta_key, meta_value) VALUES
-(@room4_id, 'room_price', '140'),
+(@room4_id, 'room_price', '42,000'),
 (@room4_id, 'room_guests', '2'),
 (@room4_id, 'bed_type', 'Queen Size Heritage Bed'),
 (@room4_id, 'room_size', '42 m² / 452 sq.ft'),

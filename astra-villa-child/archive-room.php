@@ -63,7 +63,7 @@ get_header(); ?>
                             }
                         }
 
-                        $wa_msg = urlencode("Hello! I want to check availability for " . get_the_title() . " ($" . $price . "/night).");
+                        $wa_msg = urlencode("Hello! I want to check availability for " . get_the_title() . " (Rs. " . $price . "/night).");
                         $wa_url = "https://wa.me/94771234567?text=" . $wa_msg;
                     ?>
 
@@ -76,7 +76,7 @@ get_header(); ?>
                             <span class="card-category-tag"><?php echo esc_html($cat_name); ?></span>
                             <div class="card-price-tag">
                                 <span class="prefix">From</span>
-                                <span class="cost">$<?php echo esc_html($price); ?></span>
+                                <span class="cost">Rs. <?php echo esc_html($price); ?></span>
                                 <span class="unit">/ night</span>
                             </div>
                         </div>
@@ -152,7 +152,7 @@ get_header(); ?>
                 </div>
                 <div class="buyout-action">
                     <a href="https://wa.me/94771234567?text=Hello%20Villa%20Galle!%20I%20am%20interested%20in%20a%20Private%20Whole%20Villa%20Buyout." target="_blank" class="btn-buyout-wa">
-                        <i class="fa-brands fa-whatsapp"></i> Enquire for Whole Villa ($850)
+                        <i class="fa-brands fa-whatsapp"></i> Enquire for Whole Villa (Rs. 260,000)
                     </a>
                 </div>
             </div>

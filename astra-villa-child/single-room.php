@@ -22,8 +22,8 @@ get_header(); ?>
         $room_view   = function_exists('get_field') ? get_field('room_view') : get_post_meta($post_id, 'room_view', true);
         $amenities   = function_exists('get_field') ? get_field('room_amenities') : get_post_meta($post_id, 'room_amenities', true);
 
-        // Fallback default values
-        $price     = $price ?: '185';
+        // Fallback default values (Sri Lankan Rupees)
+        $price     = $price ?: '56,000';
         $guests    = $guests ?: '2';
         $bed_type  = $bed_type ?: 'King Size Canopy Bed';
         $room_size = $room_size ?: '52 m² / 560 sq.ft';
@@ -61,7 +61,7 @@ get_header(); ?>
 
         // WhatsApp direct enquiry URL
         $wa_number  = '94771234567';
-        $wa_message = "Hello Villa Galle! I would like to enquire about reserving the *" . $room_title . "* ($" . $price . "/night). Are these dates available?";
+        $wa_message = "Hello Villa Galle! I would like to enquire about reserving the *" . $room_title . "* (Rs. " . $price . "/night). Are these dates available?";
         $wa_url     = "https://wa.me/" . $wa_number . "?text=" . rawurlencode($wa_message);
     ?>
 
@@ -174,7 +174,7 @@ get_header(); ?>
                     <div class="booking-price-header">
                         <span class="price-prefix">From</span>
                         <div class="price-main">
-                            <span class="currency">$</span>
+                            <span class="currency">Rs. </span>
                             <span class="figure"><?php echo esc_html($price); ?></span>
                             <span class="period">/ night</span>
                         </div>
