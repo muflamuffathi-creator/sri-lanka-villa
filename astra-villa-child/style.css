@@ -10,21 +10,21 @@ Text Domain: astra-villa-child
 License: GNU General Public License v2 or later
 */
 
-/* Core Theme Custom Properties (Exact 4-Color Muted Swatch Palette) */
+/* Core Theme Custom Properties (Luxury Boutique Sanctuary Palette) */
 :root {
-    --villa-primary: #1D2F3C;       /* Stripe 4: Deep Muted Navy Slate */
-    --villa-primary-light: #5D6C64; /* Stripe 3: Muted Slate Moss */
-    --villa-accent: #9FA485;        /* Stripe 2: Muted Khaki Sage */
-    --villa-accent-hover: #4F5E56;  /* Deepened Slate Moss */
-    --villa-sand: #F6F2E2;          /* Stripe 1: Pale Muted Vanilla Sand */
-    --villa-cream: #ECE5CE;         /* Soft Muted Butter Linen */
-    --villa-dark: #1D2A33;          /* Charcoal Navy (Easy on eyes) */
-    --villa-gray: #5D6C64;          /* Gentle Muted Slate Moss Gray */
-    --villa-border: #DCD4B8;        /* Subtle Vanilla Clay Stone */
+    --villa-primary: #0F2537;       /* Regal Deep Coastal Navy */
+    --villa-primary-light: #1A3E5C; /* Coastal Sapphire */
+    --villa-accent: #C5A059;        /* Radiant Ceylon Champagne Gold */
+    --villa-accent-hover: #967431;  /* Antique Ceylon Brass */
+    --villa-sand: #FAF8F5;          /* Crisp Warm Porcelain Linen */
+    --villa-cream: #F2EDE4;         /* Soft Warm Limestone Sand */
+    --villa-dark: #0F1C28;          /* Deep Midnight Navy Text */
+    --villa-gray: #536270;          /* Sophisticated Slate Gray */
+    --villa-border: #E6E1D8;        /* Clean Linen Border */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    --shadow-soft: 0 10px 30px rgba(29, 47, 60, 0.06);
-    --shadow-hover: 0 20px 40px rgba(29, 47, 60, 0.12);
+    --shadow-soft: 0 10px 30px rgba(15, 37, 55, 0.08);
+    --shadow-hover: 0 20px 40px rgba(15, 37, 55, 0.15);
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
