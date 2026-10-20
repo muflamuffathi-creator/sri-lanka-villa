@@ -1,0 +1,23 @@
+# GitHub Linguist — Language Detection Overrides
+# Ensures GitHub correctly shows PHP, HTML, CSS, JavaScript, SQL in the language bar
+
+# Treat all PHP files as PHP (not just templates)
+*.php linguist-language=PHP
+
+# Treat showcase HTML as HTML
+demo-preview/*.html linguist-language=HTML
+
+# CSS files
+*.css linguist-language=CSS
+
+# JavaScript files
+*.js linguist-language=JavaScript
+
+# SQL seed files
+*.sql linguist-language=SQL
+
+# JSON config is detectable by default — no override needed
+
+# Exclude vendored/generated files from language stats
+demo-preview/images/* linguist-vendored
+astra-villa-child/assets/images/* linguist-vendored
