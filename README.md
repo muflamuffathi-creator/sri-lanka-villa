@@ -237,8 +237,8 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **Mufla Muffathi**
 - GitHub: [@muflamuffathi-creator](https://github.com/muflamuffathi-creator)
-- Email: muflamuffathi@gmail.com
-
+- Email: fathimamufla107@gmail.com
+-Portfolio:https://fathima-mufla.netlify.app/
 ---
 
 ## 🙏 Acknowledgements
