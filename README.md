@@ -1,6 +1,5 @@
 # 🏛️ Villa Galle Fort — Luxury Sri Lankan Boutique Villa Website
 
-> **Status:** ✅ Production-Ready | **Last Updated:** October 20, 2026
 
 A bespoke, full-stack WordPress hospitality website built for a luxury Sri Lankan coastal villa in Galle Fort. Features a custom Astra child theme, custom post types, ACF integration, real-time weather API, direct WhatsApp booking, and a stunning standalone interactive showcase.
 
@@ -23,7 +22,7 @@ Designed specifically to match the hospitality and tourism clientele of agencies
 |:---:|:---:|:---:|
 | Cinematic full-screen hero with animated tagline | 4 luxury suites with specs & pricing in Rs. | Masonry gallery with smooth lightbox overlay |
 
-> 💡 **Live Preview:** Open [`demo-preview/index.html`](demo-preview/index.html) in any browser to view the full interactive showcase without a WordPress installation.
+> 💡 **Live Demo:** Open [https://drive.google.com/file/d/1PQIClkm6jfN3FNOXzydS6x-lwpCx8U-w/view?usp=sharing] in any browser to view the full interactive showcase without a WordPress installation.
 
 ---
 
